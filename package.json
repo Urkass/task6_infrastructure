@@ -1,0 +1,32 @@
+{
+  "name": "task6_infrastructure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Urkass/task6_infrastructure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Urkass/task6_infrastructure/issues"
+  },
+  "homepage": "https://github.com/Urkass/task6_infrastructure#readme"
+}
