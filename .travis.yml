@@ -1,3 +1,10 @@
 language: node_js
 node_js:
 - '6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: imPipMawq0JZ6ZUNa+xaEF96PCPr9DkROPhXzgFJsIF9e4NcWnxw5y+cj6IVpWSYZA71SMSptxwmcWqeaGy4/0Jl1ZM71mmN7nP0ZVZG9wiyKxtEKTzEZfGtZzUj+igU6mtvwiaTH3c/7kxkxRQIayBHudtLp/SnJpoX+mwZEBqMz3pA6m8QndTpGNSKUYS/aCUbVa19kKYSVb7iPFyc8F6JvvsRTvnYQ2Q+Af24rwBv97DQSNHO3kGgcUKqsfp8VhOqwGrRGkZBI7G2lWpaXICbeuNuecrP6EkGlaPCe7T4cOtCbJJRPc/YU0p0C7uPnD6XToCupElnMzq4p7J3gJtgjGtFUfWzlqLKGPFJYOpC1HzfwQiFyVuo9ESnqv1tiGYqoMUrqtArkPRPpd5JdaolO3OmAL3ZZoMetIBwRBbA5/8ZCd193aTC80izCddGUy0TfVLN/9KLC0WbGJPzJsg8GdmvrZdor116mQ0f2L7Y2H+FXLvcHnkRCFfc0wgzvo3loQq2LaTBjWYtHUgXFUqMBbejuoE1g+6ZbC9oMSXbh95cToiNaS2R/EXsVcZKpiIXVTk8/BALoqLVanO/A0Si+Q2AmOeJCgsHZNVUTvMEL8ybFNbk6FD7Boa3tvF0cseLGFr+xK+AdhraJ8N/cLrFy1lsQ3Vu3xKzTr/dZN8=
+  app: enigmatic-river-85220
+  on:
+    repo: Urkass/task6_infrastructure
