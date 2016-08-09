@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Крутой ASCII-арт</title>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width"> <!-- Это приложение адаптировано для мобильных! -->
-        <link rel="stylesheet" href="/styles.css">
-    </head>
-    <body class="page">
-        <%= face %>
-    </body>
+
+<head>
+    <title>Крутой ASCII-арт</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Это приложение адаптировано для мобильных! -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="page">
+    <form action="answerQuestion" method="post" method="post">
+        <div>В каком году основан Яндекс?</div>
+        <input type="text" name="answer">
+        <input type="submit" value="Отправить">
+    </form>
+    <%= template %>
+</body>
+
 </html>
