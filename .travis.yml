@@ -2,7 +2,9 @@ language: node_js
 node_js:
 - '6'
 script:
-- bithound check git@github.com:Urkass/task6_infrastructure.git  
+- npm run lint
+- npm run test
+- bithound check git@github.com:Urkass/task6_infrastructure.git
 deploy:
   provider: heroku
   api_key:
