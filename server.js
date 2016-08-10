@@ -12,7 +12,7 @@ const app = express();
 let _correctAnswer;
 
 app.set('port', process.env.PORT || 5000);
-
+ЛЯ ЛЯ ЛЯ
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
