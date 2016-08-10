@@ -20,7 +20,7 @@
     "nodemon": "^1.9.2"
   },
   "scripts": {
-    "test": "eslint .",
+    "test": "mocha && eslint .",
     "start": "node server.js"
   },
   "repository": {

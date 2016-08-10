@@ -1,13 +1,27 @@
 const assert = require('chai').assert;
 
-describe("pow", function() {
+const getEquation = require('../middleware/getEquation');
+const getRandomNumber = require('../middleware/getRandomNumber');
 
-  it("при возведении 2 в 3ю степень результат 8", function() {
-    assert.equal(pow(2, 3), 8);
-  });
+describe('getEquation()', function() {
+    it('Должен возвращать объект с выражением строкой и ответом цифрой', function() {
+        var answ = getEquation();
+        assert.typeOf(answ.equation, 'string');
+        assert.typeOf(answ.answer, 'Number');
+    });
+});
+describe('getRandomNumber()', function() {
+    for (var i = 1; i < 5; i++) {
+        test();
+    }
 
-  it("при возведении 3 в 4ю степень равен 81", function() {
-    assert.equal(pow(3, 4), 81);
-  });
-
+    function test() {
+        var x1 = Math.floor(Math.random()*100);
+        var x2 = x1 + Math.floor(Math.random()*100);
+        it(`Вернул число между ${x1} и ${x2}`, function() {
+            var number = getRandomNumber(x1, x2);
+            assert.isAtLeast(number, x1);
+            assert.isAtMost(number, x2);
+        });
+    }
 });

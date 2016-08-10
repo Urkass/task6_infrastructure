@@ -6,7 +6,7 @@
 const express = require('express');
 const getFace = require('cool-ascii-faces');
 const bodyParser = require('body-parser');
-
+const getEquation = require('./middleware/getEquation');
 const app = express();
 
 let _correctAnswer;
@@ -24,26 +24,15 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
+    let question = getEquation();
     response.render('index', {
-        question: getEquation(),
+        question: question.equation,
         template: ''
     });
-
-    function getEquation() {
-        let operators = ['+', '-'];
-        let equation = randomNumberRange(0, 100) + operators[randomNumberRange(0, 2)] + randomNumberRange(0, 100);
-        _correctAnswer = eval(equation);
-        console.log('Сгенерированное выражение: ', equation, ', правильный ответ: ', _correctAnswer);
-        return equation;
-    }
-
-    function randomNumberRange(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-    }
+    _correctAnswer = question.answer;
 });
 app.post('/answerQuestion', function(request, response) {
     let answer = request.body.answer;
-    // const magicNumber = 2000;
     checkAnswer(request.body.answer);
 
     function checkAnswer(answer) {
